@@ -1,10 +1,64 @@
-    $(document).ready(function () {
 
-        var canvas = document.getElementById("canvas"),
-        ctx = canvas.getContext("2d");
+$(document).ready(function () {
 
-        canvas.width = 300;
-        canvas.height = 300;
+    var canvas = document.getElementById("canvas"),
+    ctx = canvas.getContext("2d");
+		
+		
+		
+		
+		
+		
+		
+	// Obtain a reference to the canvas element
+	// using its id.
+	//htmlCanvas = document.getElementById('c'),
+   // Obtain a graphics context on the
+   // canvas element for drawing.
+   //context = htmlCanvas.getContext('2d');
+
+	// Start listening to resize events and
+	// draw canvas.
+	initialize();
+
+	function initialize() {
+	// Register an event listener to
+	// call the resizeCanvas() function each time
+	// the window is resized.
+		window.addEventListener('resize', resizeCanvas, false);
+	// Draw canvas border for the first time.
+		resizeCanvas();
+	}
+	// Display custom canvas.
+	// In this case it's a blue, 5 pixel border that
+	// resizes along with the browser window.
+	function redraw() {
+		//ctx.strokeStyle = 'blue';
+		ctx.lineWidth = '.1';
+		ctx.strokeRect(0, 0, window.innerWidth, window.innerHeight);
+	}
+	// Runs each time the DOM window resize event fires.
+	// Resets the canvas dimensions to match window,
+	// then draws the new borders accordingly.
+	function resizeCanvas() {
+		canvas.width = (window.innerWidth) - 300;
+		canvas.height = (window.innerHeight) - 150;
+		redraw();
+	}
+			
+		
+		
+		
+		
+		
+		//var ctx = (a canvas context);
+		//ctx.canvas.width  = window.innerWidth;
+		// ctx.canvas.height = window.innerHeight;
+  
+		//canvas.width = window.innerWidth;
+		//canvas.height = window.innerHeight;
+        //canvas.width = 300;
+        //canvas.height = 300;
 
         var x = 150, //player 1 positioning and speed
             y = 150,
@@ -43,17 +97,33 @@
             velX *= friction;
             x += velX;
 
-            if (x >= 285) { // colision with game boarders
-                x = 285;
+            //if (x >= 285) { // colision with game boarders
+                //x = 285;
+            //} else if (x <= 15) {
+                //x = 15;
+            //}
+			
+			
+			if (x >= canvas.width - 15) { // colision with game boarders x-axis
+                x = canvas.width - 15;
             } else if (x <= 15) {
                 x = 15;
             }
-
-            if (y > 285) {
-                y = 285;
+			
+			if (y > canvas.height - 15) { // colision with game boarders y-axis
+                y = canvas.height - 15;
             } else if (y <= 15) {
                 y = 15;
             }
+			
+			
+			
+
+            //if (y > 285) {
+                //y = 285;
+            //} else if (y <= 15) {
+                //y = 15;
+            //}
 
 
 
@@ -74,7 +144,7 @@
 
             
             ctx.beginPath();
-            ctx.clearRect(0, 0, 300, 300);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = "blue";
             ctx.arc(x, y, 15, 0, Math.PI * 2); // draw the player
             ctx.fill();
