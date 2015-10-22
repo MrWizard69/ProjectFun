@@ -3,6 +3,10 @@ canvas {
 	margin-left: 8%;
 }
 
+h2{
+	text-align: center;
+}
+
 html, body {
     /*margin-bottom: 100%;*/
 	width:  100%;
