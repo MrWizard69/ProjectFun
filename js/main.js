@@ -81,7 +81,7 @@ $(document).ready(function () {
 			
 		});
 		
-		$("#UpButton").mouseup(function(){
+		$("#UpButton").on("tap",function(){
 			console.log("clear");
 			clearInterval(timeout);
 			
