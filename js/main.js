@@ -67,6 +67,26 @@ $(document).ready(function () {
             speed = 3,
             friction = 0.5, //0.98
             keys = [];
+			
+		var buttup = $("#UpButton");
+			
+		$("#UpButton").mousedown(function() {
+			 timeout = setInterval(function(){
+				if (velY > -speed) {
+						velY--;
+						console.log("message!!!");
+                }
+			}, 10);
+			
+		});
+		
+		$("#UpButton").mouseup(function(){
+			console.log("clear");
+			clearInterval(timeout);
+			
+		});
+			
+			
 
         function update() { //player movement
 
