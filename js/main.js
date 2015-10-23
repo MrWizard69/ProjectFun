@@ -69,7 +69,8 @@ $(document).ready(function () {
             keys = [];
 			
 		var buttup = $("#UpButton");
-			
+		var timeout;
+		
 		$("#UpButton").on("taphold",function() {
 			 timeout = setInterval(function(){
 				if (velY > -speed) {
