@@ -71,7 +71,7 @@ $(document).ready(function () {
 		var buttup = $("#UpButton");
 		var timeout;
 		
-		$("#UpButton").on("taphold",function() {
+		$("#UpButton").on("mousedown",function() {
 			 timeout = setInterval(function(){
 				if (velY > -speed) {
 						velY--;
