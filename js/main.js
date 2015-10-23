@@ -81,7 +81,7 @@ $(document).ready(function () {
 			
 		});
 		
-		$("#UpButton").on("tap",function(){
+		$("#UpButton").on("touchend",function(){
 			console.log("clear");
 			clearInterval(timeout);
 			
