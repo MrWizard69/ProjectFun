@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     var canvas = document.getElementById("canvas"),
@@ -71,7 +70,8 @@ $(document).ready(function () {
 		var buttup = $("#UpButton");
 		var timeout;
 		
-		$("#UpButton").on("taphold",function() {
+		
+		$("#UpButton").on("touchstart",function() {
 			 timeout = setInterval(function(){
 				if (velY > -speed) {
 						velY--;
