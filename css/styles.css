@@ -18,30 +18,8 @@ html, body {
 	display: block;  /* No floating content on sides */
 }
 
-#UpButton{
+#btnWraper{
 	
-	width:30%;
-	height: 10%;
-	
-}
-
-#DwnButton{
-	
-	width:30%;
-	height: 10%;
-	
-}
-
-#lftButton{
-	
-	width:30%;
-	height: 10%;
-	
-}
-
-#rghtButton{
-	
-	width:30%;
-	height: 10%;
+	width: 30%;
 	
 }
