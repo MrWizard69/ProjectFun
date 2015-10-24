@@ -75,14 +75,62 @@ $(document).ready(function () {
 			 timeout = setInterval(function(){
 				if (velY > -speed) {
 						velY--;
-						console.log("message!!!");
+						
                 }
 			}, 10);
 			
 		});
 		
 		$("#UpButton").on("touchend",function(){
-			console.log("clear");
+			
+			clearInterval(timeout);
+			
+		});
+		
+		
+		$("#DwnButton").on("touchstart",function() {
+			 timeout = setInterval(function(){
+				if (velY < speed) {
+                    velY++;
+                }
+			}, 10);
+			
+		});
+		
+		$("#DwnButton").on("touchend",function(){
+			
+			clearInterval(timeout);
+			
+		});
+		
+		
+		$("#lftButton").on("touchstart",function() {
+			 timeout = setInterval(function(){
+				if (velX > -speed) {
+                    velX--;
+                }
+			}, 10);
+			
+		});
+		
+		$("#lftButton").on("touchend",function(){
+			
+			clearInterval(timeout);
+			
+		});
+		
+		
+		$("#rghtButton").on("touchstart",function() {
+			 timeout = setInterval(function(){
+				if (velX < speed) {
+                    velX++;
+                }
+			}, 10);
+			
+		});
+		
+		$("#rghtButton").on("touchend",function(){
+			
 			clearInterval(timeout);
 			
 		});
