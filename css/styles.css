@@ -20,9 +20,9 @@ html, body {
 
 #btnWraper{
 	
-	margin-left: 90%;
+	margin-right: -90%;
 	width: 10%;
 	height: 10%;
-	clear: right;
+	
 	
 }
