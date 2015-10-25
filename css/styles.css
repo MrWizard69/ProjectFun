@@ -1,6 +1,6 @@
 canvas {
     border:1px solid #000;
-	margin-left: 17%;
+	margin-left: 15%;
 }
 
 h2{
@@ -32,7 +32,7 @@ html, body {
 	
 	position: fixed;
 	right: 83%;
-	top: 10%;
+	top: 20%;
 	width: 10%;
 	height: 10%;
 	
