@@ -27,3 +27,12 @@ html, body {
 	
 	
 }
+
+#shootButton{
+	
+	position: fixed;
+	right: 83%;
+	width: 10%;
+	height: 10%;
+	
+}
