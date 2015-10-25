@@ -19,16 +19,6 @@ html, body {
 	display: block;  /* No floating content on sides */
 }
 
-#btnWraper{
-	
-	position: fixed;
-	left: 75.5%;
-	width: 10%;
-	height: 10%;
-	
-	
-}
-
 #up{
 	
 	position: fixed;
@@ -74,7 +64,7 @@ html, body {
 	position: fixed;
 	right: 89%;
 	top: 27%;
-	width: 10%;
+	width: 11%;
 	height: 10%;
 	
 }
