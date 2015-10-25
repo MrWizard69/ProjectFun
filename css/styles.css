@@ -21,7 +21,7 @@ html, body {
 
 #btnWraper{
 	position: fixed;
-	left: 82%;
+	left: 76%;
 	width: 10%;
 	height: 10%;
 	
@@ -31,7 +31,7 @@ html, body {
 #shootWrap{
 	
 	position: fixed;
-	right: 85%;
+	right: 80%;
 	top: 23%;
 	width: 10%;
 	height: 10%;
