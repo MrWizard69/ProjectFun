@@ -21,7 +21,7 @@ html, body {
 
 #btnWraper{
 	position: fixed;
-	right: -50%;
+	right: 100%;
 	width: 10%;
 	height: 10%;
 	
