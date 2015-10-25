@@ -32,7 +32,7 @@ html, body {
 #up{
 	
 	position: fixed;
-	left: 80.5%;
+	left: 83.5%;
 	top: 15%;
 	width: 10%;
 	height: 10%;
@@ -62,8 +62,8 @@ html, body {
 #down{
 	
 	position: fixed;
-	left: 80.5%;
-	top: 48%;
+	left: 83.5%;
+	top: 50%;
 	width: 10%;
 	height: 10%;
 	
