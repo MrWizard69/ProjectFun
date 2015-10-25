@@ -22,10 +22,46 @@ html, body {
 #btnWraper{
 	
 	position: fixed;
-	left: 76%;
+	left: 75.5%;
 	width: 10%;
 	height: 10%;
 	
+	
+}
+
+#up{
+	
+	position: fixed;
+	left: 75.5%;
+	width: 10%;
+	height: 10%;
+	
+}
+
+#left{
+	
+	position: fixed;
+	left: 75.5%;
+	width: 10%;
+	height: 10%;
+	
+}
+
+#right{
+	
+	position: fixed;
+	left: 75.5%;
+	width: 10%;
+	height: 10%;
+	
+}
+
+#down{
+	
+	position: fixed;
+	left: 75.5%;
+	width: 10%;
+	height: 10%;
 	
 }
 
