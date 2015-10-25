@@ -20,10 +20,10 @@ html, body {
 }
 
 #btnWraper{
-	margin-left: -5%;
-	float: right;
+	position: fixed;
+	right: 80%;
 	width: 10%;
 	height: 10%;
-	clear: right;
+	
 	
 }
