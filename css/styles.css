@@ -21,13 +21,9 @@ html, body {
 
 #btnWraper{
 	position: fixed;
-	left: 70%;
+	left: 80%;
 	width: 10%;
 	height: 10%;
 	
 	
-}
-
-#upButt{
-	left: 80%;
 }
