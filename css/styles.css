@@ -1,6 +1,6 @@
 canvas {
     border:1px solid #000;
-	margin-left: 13%;
+	margin-left: 12%;
 }
 
 h2{
@@ -20,8 +20,9 @@ html, body {
 }
 
 #btnWraper{
+	
 	position: fixed;
-	left: 78%;
+	left: 79%;
 	width: 10%;
 	height: 10%;
 	
@@ -31,7 +32,7 @@ html, body {
 #shootWrap{
 	
 	position: fixed;
-	right: 87%;
+	right: 88%;
 	top: 23%;
 	width: 10%;
 	height: 10%;
