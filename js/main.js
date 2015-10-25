@@ -40,7 +40,7 @@ $(document).ready(function () {
 	// Resets the canvas dimensions to match window,
 	// then draws the new borders accordingly.
 	function resizeCanvas() {
-		canvas.width = (window.innerWidth) * .67;
+		canvas.width = (window.innerWidth) * .68;
 		canvas.height = (window.innerHeight) * .69;
 		redraw();
 	}
