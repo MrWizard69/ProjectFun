@@ -1,20 +1,13 @@
 $(document).ready(function () {
-
-    var canvas = document.getElementById("canvas"),
-    ctx = canvas.getContext("2d");
-		
-		
-
-		
-		
-		
-		
+	
+	
+	
 	// Obtain a reference to the canvas element
 	// using its id.
-	//htmlCanvas = document.getElementById('c'),
-   // Obtain a graphics context on the
-   // canvas element for drawing.
-   //context = htmlCanvas.getContext('2d');
+	
+	
+    var canvas = document.getElementById("canvas"),
+    ctx = canvas.getContext("2d");
 
 	// Start listening to resize events and
 	// draw canvas.
@@ -29,8 +22,6 @@ $(document).ready(function () {
 		resizeCanvas();
 	}
 	// Display custom canvas.
-	// In this case it's a blue, 5 pixel border that
-	// resizes along with the browser window.
 	function redraw() {
 		//ctx.strokeStyle = 'blue';
 		ctx.lineWidth = '.1';
@@ -44,20 +35,6 @@ $(document).ready(function () {
 		canvas.height = (window.innerHeight) * .69;
 		redraw();
 	}
-			
-		
-		
-		
-		
-		
-		//var ctx = (a canvas context);
-		//ctx.canvas.width  = window.innerWidth;
-		// ctx.canvas.height = window.innerHeight;
-  
-		//canvas.width = window.innerWidth;
-		//canvas.height = window.innerHeight;
-        //canvas.width = 300;
-        //canvas.height = 300;
 
         var x = 150, //player 1 positioning and speed
             y = 150,
@@ -165,12 +142,6 @@ $(document).ready(function () {
             y += velY;
             velX *= friction;
             x += velX;
-
-            //if (x >= 285) { // colision with game boarders
-                //x = 285;
-            //} else if (x <= 15) {
-                //x = 15;
-            //}
 			
 			
 			if (x >= canvas.width - 15) { // colision with game boarders x-axis
@@ -185,16 +156,6 @@ $(document).ready(function () {
                 y = 15;
             }
 			
-			
-			
-
-            //if (y > 285) {
-                //y = 285;
-            //} else if (y <= 15) {
-                //y = 15;
-            //}
-
-
 
             if (x <= 100 && y >= 90 && y <= 100 && x >= 90) { // player colision with ai
                 x = 80;
