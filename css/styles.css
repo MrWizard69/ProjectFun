@@ -26,6 +26,7 @@ html, body {
 	top: 15%;
 	width: 10%;
 	height: 10%;
+	display:none;
 	
 }
 
@@ -36,6 +37,7 @@ html, body {
 	top: 33%;
 	width: 10%;
 	height: 10%;
+	display:none;
 	
 }
 
@@ -46,6 +48,7 @@ html, body {
 	top: 33%;
 	width: 10%;
 	height: 10%;
+	display:none;
 	
 }
 
@@ -56,6 +59,7 @@ html, body {
 	top: 50%;
 	width: 10%;
 	height: 10%;
+	display:none;
 	
 }
 
@@ -66,5 +70,6 @@ html, body {
 	top: 33%;
 	width: 11%;
 	height: 10%;
+	display:none;
 	
 }

@@ -85,36 +85,22 @@ $(document).ready(function () {
 		//----------------------this guys sets up the virtual joystick. Thank you virtualjoystick.js--------------------------------//
 		var joystick	= new VirtualJoystick({
 				container	: document.getElementById('container'),
-				mouseSupport	: false,
+				mouseSupport	: true,
 			});
 		
 		
 		
-		 //var joystickLoop = setInterval(function(){
-				//var outputEl	= document.getElementById('result');
-				//outputEl.innerHTML	= '<b>Result:</b> '
-				//	+ ' dx:'+joystick.deltaX()
-				//	+ ' dy:'+joystick.deltaY()
-				//	+ (joystick.right()	? ' right'	: '')
-				//	+ (joystick.up()	? ' up'		: '')
-				//	+ (joystick.left()	? ' left'	: '')
-				//	+ (joystick.down()	? ' down' 	: '')
+		 var joystickLoop = setInterval(function(){
+				var outputEl	= document.getElementById('result');
+				outputEl.innerHTML	= '<b>Result:</b> '
+					+ ' dx:'+joystick.deltaX()
+					+ ' dy:'+joystick.deltaY()
+					+ (joystick.right()	? ' right'	: '')
+					+ (joystick.up()	? ' up'		: '')
+					+ (joystick.left()	? ' left'	: '')
+					+ (joystick.down()	? ' down' 	: '')
 
-			
-
-			//}
-					
-			//}, 1/30 * 1000);
-		
-
-		
-	//});
-	//------------------------end of virtual joystick------------------------------------------//
-		
-		
-	function joystickUpdate(){
-		
-		if (joystick.up()) {
+			if (joystick.up()) {
                 if (velY > -speed) {
                     velY--;
                 }
@@ -134,8 +120,19 @@ $(document).ready(function () {
                 if (velX > -speed) {
                     velX--;
                 }
+
 			}
-	}
+					
+			}, 1/30 * 1000);
+		
+		
+		
+	});
+	//------------------------end of virtual joystick------------------------------------------//
+		
+		
+	
+		
 		
 		
 		
@@ -344,7 +341,6 @@ $(document).ready(function () {
 
 
             setTimeout(update, 10); //refresh the screen and sets the main loop for movement with keyboard
-			setTimeout(joystickUpdate, 10); //refresh the screen and sets the main loop for the virtual joystick 
         }
 
         update();// sets the keyboard press loop into motion
