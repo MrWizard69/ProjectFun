@@ -46,7 +46,7 @@ $(document).ready(function () {
 		
 		
 		
-		var joystickLoop = setInterval(function(){
+		 setInterval(function(){
 				var outputEl	= document.getElementById('result');
 				outputEl.innerHTML	= '<b>Result:</b> '
 					+ ' dx:'+joystick.deltaX()
