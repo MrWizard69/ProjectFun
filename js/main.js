@@ -47,8 +47,19 @@ $(document).ready(function () {
 		var buttup = $("#UpButton");
 		var timeout;
 		
+		//---------------------------------touch screen movement-----------------------------------------------//
 		
 		$("#UpButton").on("touchstart",function() {
+			 timeout = setInterval(function(){
+				if (velY > -speed) {
+						velY--;
+						
+                }
+			}, 10);
+			
+		});
+		
+		$("#UpButton").on("vmouseover",function() { // an attempt to hit two buttons at once
 			 timeout = setInterval(function(){
 				if (velY > -speed) {
 						velY--;
@@ -64,6 +75,12 @@ $(document).ready(function () {
 			
 		});
 		
+		$("#UpButton").on("vmouseout",function(){ // an attempt to hit two buttons at once
+			
+			clearInterval(timeout);
+			
+		});
+		
 		
 		$("#DwnButton").on("touchstart",function() {
 			 timeout = setInterval(function(){
@@ -74,7 +91,22 @@ $(document).ready(function () {
 			
 		});
 		
+		$("#DwnButton").on("vmouseover",function() { // an attempt to hit two buttons at once
+			 timeout = setInterval(function(){
+				if (velY < speed) {
+                    velY++;
+                }
+			}, 10);
+			
+		});
+		
 		$("#DwnButton").on("touchend",function(){
+			
+			clearInterval(timeout);
+			
+		});
+		
+		$("#DwnButton").on("vmouseout",function(){ // an attempt to hit two buttons at once
 			
 			clearInterval(timeout);
 			
@@ -90,7 +122,22 @@ $(document).ready(function () {
 			
 		});
 		
+		$("#lftButton").on("vmouseover",function() { // an attempt to hit two buttons at once
+			 timeout = setInterval(function(){
+				if (velX > -speed) {
+                    velX--;
+                }
+			}, 10);
+			
+		});
+		
 		$("#lftButton").on("touchend",function(){
+			
+			clearInterval(timeout);
+			
+		});
+		
+		$("#lftButton").on("vmouseout",function(){ // an attempt to hit two buttons at once
 			
 			clearInterval(timeout);
 			
@@ -106,15 +153,30 @@ $(document).ready(function () {
 			
 		});
 		
+		$("#rghtButton").on("vmouseover",function() { // an attempt to hit two buttons at once
+			 timeout = setInterval(function(){
+				if (velX < speed) {
+                    velX++;
+                }
+			}, 10);
+			
+		});
+		
 		$("#rghtButton").on("touchend",function(){
 			
 			clearInterval(timeout);
 			
 		});
+		
+		$("#rghtButton").on("vmouseout",function(){ // an attempt to hit two buttons at once
 			
+			clearInterval(timeout);
 			
+		});
+			
+		//------------------------Touch screen movement end---------------------------------------------//	
 
-        function update() { //player movement
+        function update() { //player movement with keyboard
 
             if (keys[38]) {
                 if (velY > -speed) {
@@ -137,7 +199,10 @@ $(document).ready(function () {
                     velX--;
                 }
             }
-
+			
+			//-----------------player movement with keyboard end --------------------------------------------//
+			
+			
             velY *= friction; //friction and positioning
             y += velY;
             velX *= friction;
@@ -183,7 +248,7 @@ $(document).ready(function () {
             
             ctx.beginPath();
             ctx.fillStyle = "black";
-            ctx.arc(100, 100, 15, 0, Math.PI * 2); // draw the ai
+            ctx.arc(100, 100, 15, 0, Math.PI * 2); // draw the ai, ai has hard coded position
             ctx.fill();
             ctx.closePath();
 
@@ -191,9 +256,9 @@ $(document).ready(function () {
             setTimeout(update, 10); //refresh the screen
         }
 
-        update();
+        update();// sets the keyboard press loop into motion
 
-        document.body.addEventListener("keydown", function (e) {
+        document.body.addEventListener("keydown", function (e) { // these make the keyboard do
             keys[e.keyCode] = true;
         });
         document.body.addEventListener("keyup", function (e) {
