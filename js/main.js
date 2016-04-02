@@ -131,20 +131,20 @@ $(document).ready(function () {
 	//------------------------end of virtual joystick------------------------------------------//
 		
 		
-	
 		
 		
 		
 		
-		//$("#UpButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
-			 //timeout = setInterval(function(){
-				//if (velY > -speed) {
-						//velY--;
+		
+		$("#UpButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+			 timeout = setInterval(function(){
+				if (velY > -speed) {
+						velY--;
 						
-                //}
-			//}, 10);
+                }
+			}, 10);
 			
-		//});
+		});
 		
 		//$("#UpButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
@@ -156,11 +156,11 @@ $(document).ready(function () {
 			
 		//});
 		
-		//$("#UpButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
+		$("#UpButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
 			
-			//clearInterval(timeout);
+			clearInterval(timeout);
 			
-		//});
+		});
 		
 		//$("#UpButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			
@@ -169,14 +169,14 @@ $(document).ready(function () {
 		//});
 		
 		
-		//$("#DwnButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
-			 //timeout = setInterval(function(){
-				//if (velY < speed) {
-                    //velY++;
-                //}
-			//}, 10);
+		$("#DwnButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+			 timeout = setInterval(function(){
+				if (velY < speed) {
+                    velY++;
+                }
+			}, 10);
 			
-		//});
+		});
 		
 		//$("#DwnButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
@@ -187,11 +187,11 @@ $(document).ready(function () {
 			
 		//});
 		
-		//$("#DwnButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
+		$("#DwnButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
 			
-			//clearInterval(timeout);
+			clearInterval(timeout);
 			
-		//});
+		});
 		
 		//$("#DwnButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			
@@ -200,14 +200,14 @@ $(document).ready(function () {
 		//});
 		
 		
-		//$("#lftButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
-			 //timeout = setInterval(function(){
-				//if (velX > -speed) {
-                    //velX--;
-                //}
-			//}, 10);
+		$("#lftButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+			 timeout = setInterval(function(){
+				if (velX > -speed) {
+                    velX--;
+                }
+			}, 10);
 			
-		//});
+		});
 		
 		//$("#lftButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
@@ -218,11 +218,11 @@ $(document).ready(function () {
 			
 		//});
 		
-		//$("#lftButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
+		$("#lftButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
 			
-			//clearInterval(timeout);
+			clearInterval(timeout);
 			
-		//});
+		});
 		
 		//$("#lftButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			
@@ -231,14 +231,14 @@ $(document).ready(function () {
 		//});
 		
 		
-		//$("#rghtButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
-			 //timeout = setInterval(function(){
-				//if (velX < speed) {
-                    //velX++;
-                //}
-			//}, 10);
+		$("#rghtButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+			 timeout = setInterval(function(){
+				if (velX < speed) {
+                    velX++;
+                }
+			}, 10);
 			
-		//});
+		});
 		
 		//$("#rghtButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
@@ -249,11 +249,11 @@ $(document).ready(function () {
 			
 		//});
 		
-		//$("#rghtButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
+		$("#rghtButton").on("touchend",function(){
 			
-			//clearInterval(timeout);
+			clearInterval(timeout);
 			
-		//});
+		});
 		
 		//$("#rghtButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			
