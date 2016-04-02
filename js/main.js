@@ -77,7 +77,7 @@ $(document).ready(function () {
                     velX--;
                 }
 
-
+			}
 					
 			}, 1/30 * 1000);
 		
