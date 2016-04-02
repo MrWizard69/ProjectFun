@@ -71,7 +71,7 @@ $(document).ready(function () {
             velY = 0,
             velX = 0,
             speed = 3,
-            friction = 0.5, //0.98
+            friction = 0.5; //0.98
 			
 		var keys = [];
 			
