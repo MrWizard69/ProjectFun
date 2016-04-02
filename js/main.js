@@ -9,7 +9,6 @@ $(document).ready(function () {
     var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d");
 	
-	document.body.requestFullscreen();//go fullscreen
 
 	// Start listening to resize events and
 	// draw canvas.
