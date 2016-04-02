@@ -38,53 +38,6 @@ $(document).ready(function () {
 		}
 		//----------------------End of full screen------------------------------------------//
 		
-		//----------------------this guys sets up the virtual joystick. Thank you virtualjoystick.js--------------------------------//
-		var joystick	= new VirtualJoystick({
-				container	: document.getElementById('container'),
-				mouseSupport	: true,
-			});
-		
-		
-		
-		 setInterval(function(){
-				var outputEl	= document.getElementById('result');
-				outputEl.innerHTML	= '<b>Result:</b> '
-					+ ' dx:'+joystick.deltaX()
-					+ ' dy:'+joystick.deltaY()
-					+ (joystick.right()	? ' right'	: '')
-					+ (joystick.up()	? ' up'		: '')
-					+ (joystick.left()	? ' left'	: '')
-					+ (joystick.down()	? ' down' 	: '')
-
-			if (joystick.up()) {
-                if (velY > -speed) {
-                    velY--;
-                }
-            }
-
-            if (joystick.down()) {
-                if (velY < speed) {
-                    velY++;
-                }
-            }
-            if (joystick.right()) {
-                if (velX < speed) {
-                    velX++;
-                }
-            }
-            if (joystick.left()) {
-                if (velX > -speed) {
-                    velX--;
-                }
-
-			}
-					
-			}, 1/30 * 1000);
-		
-		
-		
-	});
-	//------------------------end of virtual joystick------------------------------------------//
 
 	// Start listening to resize events and
 	// draw canvas.
@@ -128,15 +81,46 @@ $(document).ready(function () {
 		
 		
 		
-		$("#UpButton").on("touchstart",function() {
-			 timeout = setInterval(function(){
-				if (velY > -speed) {
-						velY--;
-						
-                }
-			}, 10);
+		
+		//----------------------this guys sets up the virtual joystick. Thank you virtualjoystick.js--------------------------------//
+		var joystick	= new VirtualJoystick({
+				container	: document.getElementById('container'),
+				mouseSupport	: false,
+			});
+		
+		
+		
+		 //var joystickLoop = setInterval(function(){
+				//var outputEl	= document.getElementById('result');
+				//outputEl.innerHTML	= '<b>Result:</b> '
+				//	+ ' dx:'+joystick.deltaX()
+				//	+ ' dy:'+joystick.deltaY()
+				//	+ (joystick.right()	? ' right'	: '')
+				//	+ (joystick.up()	? ' up'		: '')
+				//	+ (joystick.left()	? ' left'	: '')
+				//	+ (joystick.down()	? ' down' 	: '')
+
 			
-		});
+
+			//}
+					
+			//}, 1/30 * 1000);
+		
+
+		
+	});
+	//------------------------end of virtual joystick------------------------------------------//
+		
+		
+		//$("#UpButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+			 //timeout = setInterval(function(){
+				//if (velY > -speed) {
+						//velY--;
+						
+                //}
+			//}, 10);
+			
+		//});
 		
 		//$("#UpButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
@@ -148,11 +132,11 @@ $(document).ready(function () {
 			
 		//});
 		
-		$("#UpButton").on("touchend",function(){
+		//$("#UpButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
 			
-			clearInterval(timeout);
+			//clearInterval(timeout);
 			
-		});
+		//});
 		
 		//$("#UpButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			
@@ -161,14 +145,14 @@ $(document).ready(function () {
 		//});
 		
 		
-		$("#DwnButton").on("touchstart",function() {
-			 timeout = setInterval(function(){
-				if (velY < speed) {
-                    velY++;
-                }
-			}, 10);
+		//$("#DwnButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+			 //timeout = setInterval(function(){
+				//if (velY < speed) {
+                    //velY++;
+                //}
+			//}, 10);
 			
-		});
+		//});
 		
 		//$("#DwnButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
@@ -179,11 +163,11 @@ $(document).ready(function () {
 			
 		//});
 		
-		$("#DwnButton").on("touchend",function(){
+		//$("#DwnButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
 			
-			clearInterval(timeout);
+			//clearInterval(timeout);
 			
-		});
+		//});
 		
 		//$("#DwnButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			
@@ -192,14 +176,14 @@ $(document).ready(function () {
 		//});
 		
 		
-		$("#lftButton").on("touchstart",function() {
-			 timeout = setInterval(function(){
-				if (velX > -speed) {
-                    velX--;
-                }
-			}, 10);
+		//$("#lftButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+			 //timeout = setInterval(function(){
+				//if (velX > -speed) {
+                    //velX--;
+                //}
+			//}, 10);
 			
-		});
+		//});
 		
 		//$("#lftButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
@@ -210,11 +194,11 @@ $(document).ready(function () {
 			
 		//});
 		
-		$("#lftButton").on("touchend",function(){
+		//$("#lftButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
 			
-			clearInterval(timeout);
+			//clearInterval(timeout);
 			
-		});
+		//});
 		
 		//$("#lftButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			
@@ -223,14 +207,14 @@ $(document).ready(function () {
 		//});
 		
 		
-		$("#rghtButton").on("touchstart",function() {
-			 timeout = setInterval(function(){
-				if (velX < speed) {
-                    velX++;
-                }
-			}, 10);
+		//$("#rghtButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+			 //timeout = setInterval(function(){
+				//if (velX < speed) {
+                    //velX++;
+                //}
+			//}, 10);
 			
-		});
+		//});
 		
 		//$("#rghtButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
@@ -241,11 +225,11 @@ $(document).ready(function () {
 			
 		//});
 		
-		$("#rghtButton").on("touchend",function(){
+		//$("#rghtButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
 			
-			clearInterval(timeout);
+			//clearInterval(timeout);
 			
-		});
+		//});
 		
 		//$("#rghtButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			
@@ -280,6 +264,33 @@ $(document).ready(function () {
             }
 			
 			//-----------------player movement with keyboard end --------------------------------------------//
+			
+			
+			function joystickUpdate(){
+		
+				if (joystick.up()) {
+					if (velY > -speed) {
+                    velY--;
+					}
+				}
+
+				if (joystick.down()) {
+					if (velY < speed) {
+						velY++;
+					}
+				}
+				if (joystick.right()) {
+					if (velX < speed) {
+						velX++;
+					}
+				}
+				if (joystick.left()) {
+					if (velX > -speed) {
+						velX--;
+					}
+				}
+			
+			
 			
 			
             velY *= friction; //friction and positioning
@@ -333,6 +344,7 @@ $(document).ready(function () {
 
 
             setTimeout(update, 10); //refresh the screen and sets the main loop for movement with keyboard
+			setTimeout(joystickUpdate, 10); //refresh the screen and sets the main loop for virtual joystick
         }
 
         update();// sets the keyboard press loop into motion
