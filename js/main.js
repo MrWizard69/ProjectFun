@@ -156,7 +156,7 @@ $(document).ready(function () {
 			
 		//});
 		
-		$("#UpButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
+		$("#UpButton").on("touchend",function(){ 
 			
 			clearInterval(timeout);
 			
@@ -169,7 +169,7 @@ $(document).ready(function () {
 		//});
 		
 		
-		$("#DwnButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+		$("#DwnButton").on("touchstart",function() {
 			 timeout = setInterval(function(){
 				if (velY < speed) {
                     velY++;
@@ -187,7 +187,7 @@ $(document).ready(function () {
 			
 		//});
 		
-		$("#DwnButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
+		$("#DwnButton").on("touchend",function(){
 			
 			clearInterval(timeout);
 			
@@ -200,7 +200,7 @@ $(document).ready(function () {
 		//});
 		
 		
-		$("#lftButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+		$("#lftButton").on("touchstart",function() {
 			 timeout = setInterval(function(){
 				if (velX > -speed) {
                     velX--;
@@ -218,7 +218,7 @@ $(document).ready(function () {
 			
 		//});
 		
-		$("#lftButton").on("touchend",function(){ //buttons to be used later if needed. Only one can be pressed at a time
+		$("#lftButton").on("touchend",function(){
 			
 			clearInterval(timeout);
 			
@@ -231,7 +231,7 @@ $(document).ready(function () {
 		//});
 		
 		
-		$("#rghtButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
+		$("#rghtButton").on("touchstart",function() {
 			 timeout = setInterval(function(){
 				if (velX < speed) {
                     velX++;
@@ -286,7 +286,6 @@ $(document).ready(function () {
                     velX--;
                 }
             }
-		}
 			
 			//-----------------player movement with keyboard end --------------------------------------------//
 			
