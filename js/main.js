@@ -46,7 +46,7 @@ $(document).ready(function () {
 		
 		
 		
-		setInterval(function(){
+		var joystickLoop = setInterval(function(){
 				var outputEl	= document.getElementById('result');
 				outputEl.innerHTML	= '<b>Result:</b> '
 					+ ' dx:'+joystick.deltaX()
@@ -54,7 +54,31 @@ $(document).ready(function () {
 					+ (joystick.right()	? ' right'	: '')
 					+ (joystick.up()	? ' up'		: '')
 					+ (joystick.left()	? ' left'	: '')
-					+ (joystick.down()	? ' down' 	: '')	
+					+ (joystick.down()	? ' down' 	: '')
+
+			if (joystick.up()) {
+                if (velY > -speed) {
+                    velY--;
+                }
+            }
+
+            if (joystick.down()) {
+                if (velY < speed) {
+                    velY++;
+                }
+            }
+            if (joystick.right()) {
+                if (velX < speed) {
+                    velX++;
+                }
+            }
+            if (joystick.left()) {
+                if (velX > -speed) {
+                    velX--;
+                }
+
+
+					
 			}, 1/30 * 1000);
 		
 		
@@ -233,23 +257,23 @@ $(document).ready(function () {
 
         function update() { //------------player movement with keyboard---------------------------------//
 
-            if (keys[38]) {
+            if (keys[38]) { //up arrow
                 if (velY > -speed) {
                     velY--;
                 }
             }
 
-            if (keys[40]) {
+            if (keys[40]) { //down arrow
                 if (velY < speed) {
                     velY++;
                 }
             }
-            if (keys[39]) {
+            if (keys[39]) {//right arrow
                 if (velX < speed) {
                     velX++;
                 }
             }
-            if (keys[37]) {
+            if (keys[37]) { //left arrow
                 if (velX > -speed) {
                     velX--;
                 }
