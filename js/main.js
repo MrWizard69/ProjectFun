@@ -36,7 +36,7 @@ $(document).ready(function () {
 					document.webkitExitFullscreen();
 			}
 		}
-	}
+	});
 		//----------------------End of full screen------------------------------------------//
 		
 
