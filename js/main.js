@@ -286,6 +286,7 @@ $(document).ready(function () {
                     velX--;
                 }
             }
+		}
 			
 			//-----------------player movement with keyboard end --------------------------------------------//
 			
