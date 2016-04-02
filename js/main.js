@@ -12,6 +12,8 @@ $(document).ready(function () {
 	
 	$("#play").click(function(){
 		
+		//------------------------------this guys sets up full screen for the browsers--------------------------//
+		
 		if (!document.fullscreenElement &&    // alternative standard method
 			!document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
 				if (document.documentElement.requestFullscreen) {
@@ -34,9 +36,31 @@ $(document).ready(function () {
 					document.webkitExitFullscreen();
 			}
 		}
+		//----------------------End of full screen------------------------------------------//
+		
+		//----------------------this guys sets up the virtual joystick. Thank you virtualjoystick.js--------------------------------//
+		var joystick	= new VirtualJoystick({
+				container	: document.getElementById('container'),
+				mouseSupport	: true,
+			});
+		
+		
+		
+		setInterval(function(){
+				var outputEl	= document.getElementById('result');
+				outputEl.innerHTML	= '<b>Result:</b> '
+					+ ' dx:'+joystick.deltaX()
+					+ ' dy:'+joystick.deltaY()
+					+ (joystick.right()	? ' right'	: '')
+					+ (joystick.up()	? ' up'		: '')
+					+ (joystick.left()	? ' left'	: '')
+					+ (joystick.down()	? ' down' 	: '')	
+			}, 1/30 * 1000);
+		
+		
 		
 	});
-	
+	//------------------------end of virtual joystick------------------------------------------//
 
 	// Start listening to resize events and
 	// draw canvas.
@@ -77,25 +101,6 @@ $(document).ready(function () {
 		var timeout;
 		
 		//---------------------------------touch screen movement-----------------------------------------------//
-		
-		
-		var joystick	= new VirtualJoystick({
-				container	: document.getElementById('container'),
-				mouseSupport	: true,
-			});
-		
-		
-		
-		setInterval(function(){
-				var outputEl	= document.getElementById('result');
-				outputEl.innerHTML	= '<b>Result:</b> '
-					+ ' dx:'+joystick.deltaX()
-					+ ' dy:'+joystick.deltaY()
-					+ (joystick.right()	? ' right'	: '')
-					+ (joystick.up()	? ' up'		: '')
-					+ (joystick.left()	? ' left'	: '')
-					+ (joystick.down()	? ' down' 	: '')	
-			}, 1/30 * 1000);
 		
 		
 		
