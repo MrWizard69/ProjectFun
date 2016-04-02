@@ -289,6 +289,7 @@ $(document).ready(function () {
 						velX--;
 					}
 				}
+			}
 			
 			
 			
