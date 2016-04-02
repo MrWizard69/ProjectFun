@@ -72,7 +72,8 @@ $(document).ready(function () {
             velX = 0,
             speed = 3,
             friction = 0.5, //0.98
-            keys = [];
+			
+		var keys = [];
 			
 		var buttup = $("#UpButton");
 		var timeout;
