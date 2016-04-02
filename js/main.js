@@ -108,8 +108,35 @@ $(document).ready(function () {
 		
 
 		
-	});
+	//});
 	//------------------------end of virtual joystick------------------------------------------//
+		
+		
+	function joystickUpdate(){
+		
+		if (joystick.up()) {
+                if (velY > -speed) {
+                    velY--;
+                }
+            }
+
+            if (joystick.down()) {
+                if (velY < speed) {
+                    velY++;
+                }
+            }
+            if (joystick.right()) {
+                if (velX < speed) {
+                    velX++;
+                }
+            }
+            if (joystick.left()) {
+                if (velX > -speed) {
+                    velX--;
+                }
+			}
+	}
+		
 		
 		
 		//$("#UpButton").on("touchstart",function() { //buttons to be used later if needed. Only one can be pressed at a time
@@ -266,34 +293,6 @@ $(document).ready(function () {
 			//-----------------player movement with keyboard end --------------------------------------------//
 			
 			
-			function joystickUpdate(){
-		
-				if (joystick.up()) {
-					if (velY > -speed) {
-                    velY--;
-					}
-				}
-
-				if (joystick.down()) {
-					if (velY < speed) {
-						velY++;
-					}
-				}
-				if (joystick.right()) {
-					if (velX < speed) {
-						velX++;
-					}
-				}
-				if (joystick.left()) {
-					if (velX > -speed) {
-						velX--;
-					}
-				}
-			}
-			
-			
-			
-			
             velY *= friction; //friction and positioning
             y += velY;
             velX *= friction;
@@ -345,7 +344,7 @@ $(document).ready(function () {
 
 
             setTimeout(update, 10); //refresh the screen and sets the main loop for movement with keyboard
-			setTimeout(joystickUpdate, 10); //refresh the screen and sets the main loop for virtual joystick
+			setTimeout(joystickUpdate, 10); //refresh the screen and sets the main loop for the virtual joystick 
         }
 
         update();// sets the keyboard press loop into motion
