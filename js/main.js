@@ -12,9 +12,10 @@ $(document).ready(function () {
 	
 	$("#play").click(function(){
 		
-		$("body").webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+		//$("body").webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
 		$("body").mozRequestFullScreen();
 		$("body").msRequestFullscreen();
+		$("body").div.requestFullscreen();
 		
 	});
 	
