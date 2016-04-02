@@ -78,6 +78,27 @@ $(document).ready(function () {
 		
 		//---------------------------------touch screen movement-----------------------------------------------//
 		
+		
+		var joystick	= new VirtualJoystick({
+				container	: $("body"),
+				mouseSupport	: true,
+			});
+		
+		
+		
+		setInterval(function(){
+				var outputEl	= document.getElementById('result');
+				outputEl.innerHTML	= '<b>Result:</b> '
+					+ ' dx:'+joystick.deltaX()
+					+ ' dy:'+joystick.deltaY()
+					+ (joystick.right()	? ' right'	: '')
+					+ (joystick.up()	? ' up'		: '')
+					+ (joystick.left()	? ' left'	: '')
+					+ (joystick.down()	? ' down' 	: '')	
+			}, 1/30 * 1000);
+		
+		
+		
 		$("#UpButton").on("touchstart",function() {
 			 timeout = setInterval(function(){
 				if (velY > -speed) {
@@ -182,15 +203,6 @@ $(document).ready(function () {
 			
 		});
 		
-		$("#rghtButton").on("swiperight",function() {
-			 timeout = setInterval(function(){
-				if (velX < speed) {
-                    velX++;
-                }
-			}, 10);
-			
-		});
-		
 		//$("#rghtButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
 				//if (velX < speed) {
@@ -214,7 +226,7 @@ $(document).ready(function () {
 			
 		//------------------------Touch screen movement end---------------------------------------------//	
 
-        function update() { //player movement with keyboard
+        function update() { //------------player movement with keyboard---------------------------------//
 
             if (keys[38]) {
                 if (velY > -speed) {
@@ -291,7 +303,7 @@ $(document).ready(function () {
             ctx.closePath();
 
 
-            setTimeout(update, 10); //refresh the screen
+            setTimeout(update, 10); //refresh the screen and sets the main loop for movement with keyboard
         }
 
         update();// sets the keyboard press loop into motion
