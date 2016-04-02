@@ -49,7 +49,17 @@ $(document).ready(function () {
 		
 		//---------------------------------touch screen movement-----------------------------------------------//
 		
-		$("#UpButton").on("touchstart",function() {
+		//$("#UpButton").on("touchstart",function() {
+			 //timeout = setInterval(function(){
+				//if (velY > -speed) {
+						//velY--;
+						
+                //}
+			//}, 10);
+			
+		//});
+		
+		$("#UpButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game
 			 timeout = setInterval(function(){
 				if (velY > -speed) {
 						velY--;
@@ -59,39 +69,29 @@ $(document).ready(function () {
 			
 		});
 		
-		$("#UpButton").on("vmouseover",function() { // an attempt to hit two buttons at once
-			 timeout = setInterval(function(){
-				if (velY > -speed) {
-						velY--;
-						
-                }
-			}, 10);
+		//$("#UpButton").on("touchend",function(){
 			
-		});
+			//clearInterval(timeout);
+			
+		//});
 		
-		$("#UpButton").on("touchend",function(){
-			
-			clearInterval(timeout);
-			
-		});
-		
-		$("#UpButton").on("vmouseout",function(){ // an attempt to hit two buttons at once
+		$("#UpButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game
 			
 			clearInterval(timeout);
 			
 		});
 		
 		
-		$("#DwnButton").on("touchstart",function() {
-			 timeout = setInterval(function(){
-				if (velY < speed) {
-                    velY++;
-                }
-			}, 10);
+		//$("#DwnButton").on("touchstart",function() {
+			 //timeout = setInterval(function(){
+				//if (velY < speed) {
+                   // velY++;
+                //}
+			//}, 10);
 			
-		});
+		//});
 		
-		$("#DwnButton").on("vmouseover",function() { // an attempt to hit two buttons at once
+		$("#DwnButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game
 			 timeout = setInterval(function(){
 				if (velY < speed) {
                     velY++;
@@ -100,20 +100,29 @@ $(document).ready(function () {
 			
 		});
 		
-		$("#DwnButton").on("touchend",function(){
+		//$("#DwnButton").on("touchend",function(){
+			
+			//clearInterval(timeout);
+			
+		//});
+		
+		$("#DwnButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game
 			
 			clearInterval(timeout);
 			
 		});
 		
-		$("#DwnButton").on("vmouseout",function(){ // an attempt to hit two buttons at once
-			
-			clearInterval(timeout);
-			
-		});
 		
+		//$("#lftButton").on("touchstart",function() {
+			 //timeout = setInterval(function(){
+				//if (velX > -speed) {
+                    //velX--;
+                //}
+			//}, 10);
+			
+		//});
 		
-		$("#lftButton").on("touchstart",function() {
+		$("#lftButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game
 			 timeout = setInterval(function(){
 				if (velX > -speed) {
                     velX--;
@@ -122,38 +131,29 @@ $(document).ready(function () {
 			
 		});
 		
-		$("#lftButton").on("vmouseover",function() { // an attempt to hit two buttons at once
-			 timeout = setInterval(function(){
-				if (velX > -speed) {
-                    velX--;
-                }
-			}, 10);
+		//$("#lftButton").on("touchend",function(){
 			
-		});
+			//clearInterval(timeout);
+			
+		//});
 		
-		$("#lftButton").on("touchend",function(){
-			
-			clearInterval(timeout);
-			
-		});
-		
-		$("#lftButton").on("vmouseout",function(){ // an attempt to hit two buttons at once
+		$("#lftButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game
 			
 			clearInterval(timeout);
 			
 		});
 		
 		
-		$("#rghtButton").on("touchstart",function() {
-			 timeout = setInterval(function(){
-				if (velX < speed) {
-                    velX++;
-                }
-			}, 10);
+		//$("#rghtButton").on("touchstart",function() {
+			 //timeout = setInterval(function(){
+				//if (velX < speed) {
+                    //velX++;
+                //}
+			//}, 10);
 			
-		});
+		//});
 		
-		$("#rghtButton").on("vmouseover",function() { // an attempt to hit two buttons at once
+		$("#rghtButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game
 			 timeout = setInterval(function(){
 				if (velX < speed) {
                     velX++;
@@ -162,11 +162,11 @@ $(document).ready(function () {
 			
 		});
 		
-		$("#rghtButton").on("touchend",function(){
+		//$("#rghtButton").on("touchend",function(){
 			
-			clearInterval(timeout);
+			//clearInterval(timeout);
 			
-		});
+		//});
 		
 		$("#rghtButton").on("vmouseout",function(){ // an attempt to hit two buttons at once
 			
