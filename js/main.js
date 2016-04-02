@@ -9,7 +9,7 @@ $(document).ready(function () {
     var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d");
 	
-	$(document).delegate("body", "scrollstart", false);// disable page scroll
+	document.body.requestFullscreen();//go fullscreen
 
 	// Start listening to resize events and
 	// draw canvas.
