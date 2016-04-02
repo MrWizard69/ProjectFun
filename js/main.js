@@ -13,27 +13,27 @@ $(document).ready(function () {
 	$("#play").click(function(){
 		
 		if (!document.fullscreenElement &&    // alternative standard method
-      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
-    if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) {
-      document.documentElement.msRequestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-    }
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    }
-  }
+			!document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+				if (document.documentElement.requestFullscreen) {
+						document.documentElement.requestFullscreen();
+				} else if (document.documentElement.msRequestFullscreen) {
+							document.documentElement.msRequestFullscreen();
+				} else if (document.documentElement.mozRequestFullScreen) {
+							document.documentElement.mozRequestFullScreen();
+				} else if (document.documentElement.webkitRequestFullscreen) {
+							document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+				}
+		} else {
+			if (document.exitFullscreen) {
+					document.exitFullscreen();
+			} else if (document.msExitFullscreen) {
+					document.msExitFullscreen();
+			} else if (document.mozCancelFullScreen) {
+					document.mozCancelFullScreen();
+			} else if (document.webkitExitFullscreen) {
+					document.webkitExitFullscreen();
+			}
+		}
 		
 	});
 	
@@ -78,17 +78,7 @@ $(document).ready(function () {
 		
 		//---------------------------------touch screen movement-----------------------------------------------//
 		
-		//$("#UpButton").on("touchstart",function() {
-			 //timeout = setInterval(function(){
-				//if (velY > -speed) {
-						//velY--;
-						
-                //}
-			//}, 10);
-			
-		//});
-		
-		$("#UpButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game
+		$("#UpButton").on("touchstart",function() {
 			 timeout = setInterval(function(){
 				if (velY > -speed) {
 						velY--;
@@ -98,29 +88,30 @@ $(document).ready(function () {
 			
 		});
 		
-		//$("#UpButton").on("touchend",function(){
-			
-			//clearInterval(timeout);
-			
-		//});
-		
-		$("#UpButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game
-			
-			clearInterval(timeout);
-			
-		});
-		
-		
-		//$("#DwnButton").on("touchstart",function() {
+		//$("#UpButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
-				//if (velY < speed) {
-                   // velY++;
+				//if (velY > -speed) {
+						//velY--;
+						
                 //}
 			//}, 10);
 			
 		//});
 		
-		$("#DwnButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game
+		$("#UpButton").on("touchend",function(){
+			
+			clearInterval(timeout);
+			
+		});
+		
+		//$("#UpButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
+			
+			//clearInterval(timeout);
+			
+		//});
+		
+		
+		$("#DwnButton").on("touchstart",function() {
 			 timeout = setInterval(function(){
 				if (velY < speed) {
                     velY++;
@@ -129,29 +120,29 @@ $(document).ready(function () {
 			
 		});
 		
-		//$("#DwnButton").on("touchend",function(){
-			
-			//clearInterval(timeout);
-			
-		//});
-		
-		$("#DwnButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game
-			
-			clearInterval(timeout);
-			
-		});
-		
-		
-		//$("#lftButton").on("touchstart",function() {
+		//$("#DwnButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
-				//if (velX > -speed) {
-                    //velX--;
+				//if (velY < speed) {
+                    //velY++;
                 //}
 			//}, 10);
 			
 		//});
 		
-		$("#lftButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game
+		$("#DwnButton").on("touchend",function(){
+			
+			clearInterval(timeout);
+			
+		});
+		
+		//$("#DwnButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
+			
+			//clearInterval(timeout);
+			
+		//});
+		
+		
+		$("#lftButton").on("touchstart",function() {
 			 timeout = setInterval(function(){
 				if (velX > -speed) {
                     velX--;
@@ -160,29 +151,29 @@ $(document).ready(function () {
 			
 		});
 		
-		//$("#lftButton").on("touchend",function(){
-			
-			//clearInterval(timeout);
-			
-		//});
-		
-		$("#lftButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game
-			
-			clearInterval(timeout);
-			
-		});
-		
-		
-		//$("#rghtButton").on("touchstart",function() {
+		//$("#lftButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
 			 //timeout = setInterval(function(){
-				//if (velX < speed) {
-                    //velX++;
+				//if (velX > -speed) {
+                    //velX--;
                 //}
 			//}, 10);
 			
 		//});
 		
-		$("#rghtButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game
+		$("#lftButton").on("touchend",function(){
+			
+			clearInterval(timeout);
+			
+		});
+		
+		//$("#lftButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
+			
+			//clearInterval(timeout);
+			
+		//});
+		
+		
+		$("#rghtButton").on("touchstart",function() {
 			 timeout = setInterval(function(){
 				if (velX < speed) {
                     velX++;
@@ -191,17 +182,35 @@ $(document).ready(function () {
 			
 		});
 		
-		//$("#rghtButton").on("touchend",function(){
+		$("#rghtButton").on("swiperight",function() {
+			 timeout = setInterval(function(){
+				if (velX < speed) {
+                    velX++;
+                }
+			}, 10);
 			
-			//clearInterval(timeout);
+		});
+		
+		//$("#rghtButton").on("vmouseover",function() { // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
+			 //timeout = setInterval(function(){
+				//if (velX < speed) {
+                    //velX++;
+                //}
+			//}, 10);
 			
 		//});
 		
-		$("#rghtButton").on("vmouseout",function(){ // an attempt to hit two buttons at once
+		$("#rghtButton").on("touchend",function(){
 			
 			clearInterval(timeout);
 			
 		});
+		
+		//$("#rghtButton").on("vmouseout",function(){ // an attempt to hit two buttons at once. Good for some kind of drunk maze game combined with touchstart movement
+			
+			//clearInterval(timeout);
+			
+		//});
 			
 		//------------------------Touch screen movement end---------------------------------------------//	
 
