@@ -80,7 +80,7 @@ $(document).ready(function () {
 		
 		
 		var joystick	= new VirtualJoystick({
-				container	: $("body"),
+				container	: document.getElementById('container'),
 				mouseSupport	: true,
 			});
 		
