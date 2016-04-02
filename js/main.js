@@ -9,7 +9,7 @@ $(document).ready(function () {
     var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d");
 	
-	$(document).delegate(".ui-content", "scrollstart", false);// disable page scroll
+	$(document).delegate("body", "scrollstart", false);// disable page scroll
 
 	// Start listening to resize events and
 	// draw canvas.
